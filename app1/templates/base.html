@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<head>
+    <meta charset="utf-8" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/75f867dd61.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="navbar clearfix">
+        <div class="container">
+            <h1 class="logo">AP</h1>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="{% url 'proall' %}">Home</a></li>
+                <li class="nav-item"><a href="{% url 'about' %}">About</a></li>
+                <li class="nav-item"><a href="{% url 'contact' %}">Contact</a></li>
+                <li class="nav-item"><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    {% block allproducts %}
+    {% endblock %}
+    {% block productview %}
+    {% endblock %}
+    {% block productadd %}
+    {% endblock %}
+    {% block productupdate %}
+    {% endblock %}
+    {% block about %}
+    {% endblock %}
+    {% block contact %}
+    {% endblock %}
+
+    <section class="footer">
+        <div class="container">
+            <div class="social">
+
+                <i class="fab fa-twitter fa-3x text-white"></i>
+                <i class="fab fa-instagram fa-3x text-white"></i>
+                <i class="fab fa-facebook fa-3x text-white"></i>
+            </div>
+            <p class="sm-heading text-white">
+                A website by, Aditya Patel &copy 2022
+            </p>
+        </div>
+
+    </section>
+
+    <!--login,sign,product
+
+    vendor: login,product add, product view,product delte
+    user: signup,login,product view
+    admin: all rights-->
+</body>
+</html>

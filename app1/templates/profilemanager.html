@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Sign Up</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="sign">
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+            <form method="post">
+                {% csrf_token %}
+                <h3>Sign Up Here</h3>
+                <div class="clearfix">
+                    <div class="name fname">
+                        <label for="fname" name="fname">First Name</label>
+                        <input type="text" name="fname" id="fname" placeholder="Enter First Name" value="{{c.first}}" required/>
+                    </div>
+                    <div class="name lname">
+                        <label for="lname" name="lname">Last Name</label>
+                        <input type="text" name="lname" id="lname" placeholder="Enter Last Name" value="{{c.last}}" required/>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="name fname">
+                        <label for="email" name="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter Email" value="{{c.email}}" required/>
+                    </div>
+                    <div class="name lname">
+                        <label for="mobile">Mobile No.</label>
+                        <input type="number" name="mobile" id="mobile" placeholder="Enter Mobile No." value="{{c.mobile}}" required/>
+                    </div>
+                </div>
+
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter username" value="{{c.username}}" required/><br />
+                <label for="psw">Password</label>
+                <input type="password" name="psw" id="psw" placeholder="Enter password" value="{{c.password}}" required/><br />
+                <label for="confirmpass">Confirm Password</label>
+                <input type="password" name="confirmpass" id="confirmpass" placeholder="Re-Enter password" value="{{c.password}}" required/><br />
+                <input type="submit" name="signup" value="Save" /><br />
+                
+            </form>
+        
+    </div>
+
+</body>
+</html>

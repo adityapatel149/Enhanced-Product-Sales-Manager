@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block allproducts %}
+{% load static %}
+
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>All Products</title>
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/75f867dd61.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="proall">
+    <div class="container">
+        <h1 class="heading">Welcome, {{c.username}}! <br />All Products</h1>
+
+        <form method="get">
+            <input type="text" name="search" id="search" placeholder="Search products" />
+            <input type="submit" name="submit" value="Search" />
+        </form>
+
+        <div class="box-wrapper">
+
+            <!--<table>
+            <tr>
+                <th>name</th>
+                <th>image</th>
+                <th>price</th>
+                <th>View</th>
+            </tr>
+
+            {% for i in l %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td><img src="{{i.img.url}}" alt="Alternate Text" width="50px" /></td>
+                <td>{{i.price}}</td>
+                <td><a href="{% url 'productview' i.id %}">View</a></td>
+            </tr>
+            {% endfor %}
+
+        </table>-->
+            {% for i in l %}
+            <div class="card">
+                <p class="proname">{{i.name}}<p>
+                    <img class="proimg" src="{{i.img.url}}" alt="Alternate Text" />
+                <p class="proprice">₹{{i.price}}</p>
+                <a href="{% url 'productview' i.id %}" class="proview">View</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    {% endblock %}
+</body>
+</html>

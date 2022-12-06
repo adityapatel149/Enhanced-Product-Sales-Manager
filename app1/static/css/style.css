@@ -1,0 +1,771 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* 10px for default font size, but using % makes responsive website when someone chnages their browser's font size*/
+}
+
+body {
+    background-color: #080712;
+    
+}
+
+ul li {
+    list-style: none;
+}
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+.navbar {
+    /*border: 2px solid black;*/
+    padding: 1rem; /*10px*/
+    user-select: none;
+    background-color: #080712;
+}
+    .navbar .logo{
+        float: left;
+    }
+    .navbar h1{
+        font-size: 3.2rem;
+        color: white;
+    }
+.proall h1 {
+    font-size: 3.2rem;
+    color: white;
+}
+
+    .navbar .nav-items {
+        float: right;
+    }
+
+    .navbar::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .navbar .nav-items .nav-item {
+        display: inline-block;
+        padding: 1rem; 
+    }
+        .navbar .nav-items .nav-item a {
+            font-size: 2.4rem;
+            font-weight: 500;
+            margin-top:0;
+            margin-left: 1em;
+            text-align: center;
+            text-decoration: none;
+        }
+        .navbar .nav-items .nav-item a::after {
+            content:'';
+            display:none;
+        }
+
+    .navbar .nav-item :link,
+    .navbar .nav-item :visited {
+        color: white;
+    }
+
+    .navbar .nav-item :hover {
+        color: #eba434;
+    }
+
+/*#################### footer section styling ########################*/
+.footer {
+    background-color: #111;
+    padding: 2rem 0;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    width: 100%;
+}
+
+    .footer p {
+        margin-bottom: 0px;
+    }
+
+    .footer .social i {
+        margin: 2rem;
+    }
+
+
+
+.background {
+    width: 47rem;
+    height: 52rem;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+
+    .background .shape {
+        height: 20rem;
+        width: 20rem;
+        position: absolute;
+        border-radius: 50%;
+    }
+
+.shape:first-child {
+    background: linear-gradient(#1845ad, #23a2f6);
+    left: -8rem;
+    top: -8rem;
+}
+
+.shape:last-child {
+    background: linear-gradient( to right, #ff512f, #f09819 );
+    right: -3rem;
+    bottom: -8rem;
+}
+
+form {
+    width: 43rem;
+    height: 55rem;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(8,7,16,0.6);
+    padding: 4em 5em;
+    backdrop-filter: blur(7.5px);
+    user-select: none;
+}
+
+    form * {
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 0.1em;
+        outline: none;
+        border: none;
+    }
+
+    form h3 {
+        text-align: center;
+        font-size: 3.2rem;
+        font-weight: 500;
+        line-height: 4.2rem;
+    }
+
+    form label {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-top: 2em;
+    }
+
+    form input {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 300;
+        height: 3em;
+        width: 100%;
+        margin-top: 0.3em;
+        padding: 0 0.6em;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 5px;
+    }
+
+        form input[type="submit"] {
+            background-color: white;
+            color: black;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 1.6em; /*30px=1.6x18px*/
+            height: 2.77em; /*50px*/
+            cursor: pointer;
+            border-radius: 7.5px;
+        }
+
+a {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 1.5em;
+    text-decoration: none;
+}
+
+ a::after {
+        content: '';
+        display: block;
+        border: 1.5px solid white;
+        background: white;
+        width: 11em;
+        margin-top: 0.5em;
+        border-radius: 1px;
+    }
+
+    /*---------------------------------- Sign Up ----------------------------------*/
+    .sign *{
+        margin-top: 0.3em;
+    }
+    .sign label:first-of-type{
+        margin-top: 1em;
+    }
+.sign h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+.sign .background {
+    height: 72rem;
+}
+.sign form {
+    height: 75rem;
+    width: 45rem;
+}
+.sign .name {
+    float: left;
+    width: 47%;
+}
+.sign .fname{
+    margin-right: 2em;
+}
+.clearfix::after{
+    content:'';
+    clear:both;
+    display: block;
+}
+/*---------------------------------- Proall ----------------------------------*/
+.proall *{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1em;
+    /*text-align: center;*/
+    text-transform:capitalize;
+}
+.proall form {
+    width: auto;
+    height: auto;
+    position: relative;
+    background-color: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    backdrop-filter: none;
+    user-select: none;
+}
+    .proall form input {
+        display: inline;
+        font-size: 1.4rem;
+        font-weight: 300;
+        height: 2.77em;
+        width: 30%;
+        margin-top: 1em;
+        /*margin-left: 2.5%;*/
+        padding: 0 0.6em;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+    }
+        .proall form input[type="submit"] {
+            color: black;
+            font-size: 1.4rem;
+            font-weight: 600;
+            width: auto;
+            margin-left:0.75%;
+            height: 2.77em; /*50px*/
+            cursor: pointer;
+            border-radius: 7.5px;
+        }
+.proall{
+    background-color: rgb(250,250,250);
+}
+    .proall a:after{
+        border: none;
+    }
+
+.box-wrapper {
+    /*border: 5px solid skyblue;*/ 
+    display: flex;
+    height: 100%;
+    min-height: 80vh;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-content: flex-start;
+
+}
+.card {
+    background-color: white;
+    border: solid 0.32rem gray;
+
+    border-radius: 1rem;
+    box-shadow: rgba(30, 30, 30, 0.41) -0.5rem 0.7rem 1.8rem;
+    flex-basis: 21%;
+    flex-grow: 0;
+    flex-shrink: 1;
+
+    padding: 1em;
+    padding-bottom:0.5em;
+    font-size: 2.4rem;
+    margin: 1em;
+}
+.card img{
+    max-width: 100%;
+    width: auto;
+}
+    .card a {
+        display: block;
+        font-size: 2.4rem;
+        margin-top: 0.5em;
+        padding: 0.2em;
+        border-radius: 10em;
+        text-align: center;
+        text-decoration: none;
+        border: 0.2em solid #f09819;
+     text-align: center;
+    }
+        .card a:hover {
+            background: linear-gradient( to right, #ff512f, #f09819 );
+            color: white;
+        }
+
+
+   .card a::after {
+        content: '';
+        display: none;
+    }
+
+
+   .proall .heading {
+       color: black;
+       margin: 2.5% 0;
+   }
+
+.card .productadd {
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    padding-top: 99%;
+    border-radius: 0.5rem;
+    font-size: 5.6rem;
+}
+    .card .productadd:hover {
+        background: linear-gradient(#1845ad, #23a2f6);
+        color: white;
+    }
+
+/*---------------------------------- Product View ----------------------------------*/
+
+.productview * {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1em;
+    /*text-align: center;*/
+    text-transform: capitalize;
+}
+
+.productview{
+    background-color: rgb(250,250,250);
+}
+
+.box-wrapper{
+    margin-top: 2rem;
+}
+.productview .image img{
+    height: 50rem;
+}
+.productview h1 {
+    font-size: 3.2rem;
+    color: white;
+}
+.detail h1{
+    font-size: 5.6rem;
+    color: black;
+    margin-bottom: 2rem;
+}
+.detail p{
+    font-size: 1.8rem;
+}
+
+
+/*----------------------------Add Product-----------------------------------*/
+
+
+.productadd * {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1em;
+    /*text-align: center;*/
+    text-transform: capitalize;
+}
+
+.productaddbody{
+    position: relative;
+    top: 40rem;
+    margin-top: 3em;
+}
+.productadd h1{
+    font-size: 3.2rem;
+}
+.productadd .background {
+    height: 72rem;
+}
+
+.productadd form {
+    height: 72rem;
+    width: 45rem;
+}
+
+.productadd .footer{
+    display: none;
+}
+
+/*---------------------------------About Us---------------------------------------*/
+.about * {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1em;
+    /*text-align: center;*/
+    text-transform: capitalize;
+}
+.about {
+    background: white;
+    height: 90vh;
+}
+.about-heading{
+    margin: 2.5% 0;
+}
+/* DRAWING LINE USING PSEUDO ELEMENT
+    we areusing pseudo element for this because it will also allow us to chnage the line's width.
+    if i gace border directly to h2, I wont have much control on its width.
+*/
+.about-heading::after {
+    content: "";
+    display: block; /*inline by default*/
+    border: 3px solid #cf3030;
+    /*will give me a border of 6px a sit will have both top and bottom border*/
+    width: 100%;
+}
+
+.about p, .about li {
+    letter-spacing: 0.1em;
+    font-size: 1.6rem;
+}
+
+.points {
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.left-points {
+    float: left;
+    width: 50%;
+}
+
+.right-points {
+    float: right;
+    width: 50%;
+}
+
+
+.points::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.points li::before {
+    content: '\2713'; /*got this code from internet */
+    /* google "tick mark symbol code css content" */
+    color: #cf3030;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+
+
+/*#################### counts styling ########################*/
+.count-item {
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.count {
+    margin-top: 2rem;
+}
+
+    .count::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+.count-item span {
+    font-weight: 700;
+}
+
+.count-item p {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+
+/*#################### banner styling ########################*/
+
+.banner {
+    background: radial-gradient( circle farthest-corner at 150% 70%, #eba434 0%, #cf3030 100% );
+    padding: 2rem;
+    position: relative;
+    margin-top: 5rem;
+    box-shadow: -5px 5px 20px 0px rgba(0, 0, 0, 0.50);
+}
+
+.banner-text p {
+    float: left;
+    width: 70%;
+    padding: 0.5em;
+    margin: 0px; /*we have set p to have margin-bottom: 0.5em(above utility classes), and i dont want that here*/
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.contact {
+    float: right;
+    width: 25%;
+    text-align: right;
+}
+
+.banner::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.btn-contact {
+    text-align: center;
+    display: inline-block;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 1em 2em;
+    border: 0.4rem solid white;
+    letter-spacing: 0.5rem;
+    font-size: 1.6rem;
+    margin-top: 0;
+}
+
+.about a::after {
+    content: '';
+    display: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.lg-heading {
+    font-size: 3.5rem;
+}
+
+.text-red {
+    color: #cf3030;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-dark {
+    color: #3c4947;
+}
+
+/*-----------------------------------------Contact US-----------------------------*/
+.contact-body * {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1em;
+    /*text-align: center;*/
+    text-transform: capitalize;
+}
+
+.contact-body {
+    background: radial-gradient( circle farthest-corner at 150% 70%, #eba434 0%, #cf3030 100% );
+    height: 100vh; /*gradient repeat thatutu because html code pati jatoto toh body pati jatutu and eni niche ni blank space me repeat thatutu gradient, cover, contain didnt work either
+        using this gives gradient across the whole visible area always
+    */
+}
+
+.contact-form {
+    /*border: 6px solid black;*/
+}
+
+.form-wrapper {
+    /* border: 2px solid red;*/
+    padding: 5rem;
+}
+
+.company-address {
+    /* border: 2px solid green;*/
+    background-color: white;
+    float: left;
+    width: 49%; /*for some space between the two*/
+    height: 90rem; /*company adress and form both given same height so it looks uniform*/
+    padding: 1.5rem;
+}
+
+.form {
+    /*border: 2px solid blue;*/
+    background-color: white;
+    float: right;
+    width: 49%;
+}
+
+.form-wrapper::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.company-address img {
+    display: inline-block;
+    max-width: 100%;
+    min-height: 40rem;
+    object-fit: cover;
+    /*object-position: left;*/
+}
+
+.company-address p {
+    margin-bottom: 1em;
+    padding-left: 4rem;
+    font-size: 2.4rem;
+}
+
+.company-address .fas {
+    padding: 1rem;
+}
+
+.form {
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    height: 90rem;
+}
+
+    .form h1::after {
+        content: '';
+        display: block;
+        border: solid 2px #eba434;
+        width: 100%;
+    }
+
+    .form p {
+        font-size: 1.6rem;
+    }
+
+    .form label {
+        display: block; /*so that the input field goes in next line*/
+        letter-spacing: 0.1rem;
+        font-weight: 500;
+    }
+
+    .form input {
+        width: 100%; /*so it looks good and clean. by default it had uneven widths and didnt look good*/
+        padding: 0.5rem;
+    }
+
+    .form textarea {
+        width: 100%;
+        height: 300px;
+        padding: 1rem;
+        margin-top: 1em;
+        background-color: rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+    }
+
+.form-wrapper .form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-wrapper .form label::after {
+    content: " *";
+    color: #cf3030;
+}
+
+.form-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 0.5em 3em;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: #eba434;
+    color: white;
+    outline: none;
+    border: none;
+}
+.contact-body form * {
+    color: black
+}
+    .contact-body form {
+    background-color: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    user-select: none;
+    position: static; 
+    transform: none;
+    left: 50%;
+    top: 50%;
+}
+
+    .contact-body form input {
+        display: inline;
+        font-size: 1.4rem;
+        font-weight: 300;
+        height: 2.77em;
+        width: 100%;
+        margin-top: 1em;
+        /*margin-left: 2.5%;*/
+    padding: 0 0.6em;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.md-heading {
+    font-size: 2.2rem;
+}
+
+
+
+    /*---------------------------------MEDIA QUERIES-----------------------------*/
+
+@media (max-width: 500px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media (max-width: 900px) and (min-width:501px) {
+    html {
+        font-size: 65%;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    html {
+        font-size: 40%;
+    }
+
+    .background, form {
+        width: 80rem;
+    }
+}
+
+
+
+
+
+

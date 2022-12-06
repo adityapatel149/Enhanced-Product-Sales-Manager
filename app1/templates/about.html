@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block about %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>About Us</title>
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/75f867dd61.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="about">
+
+    <section class="about">
+        <div class="container">
+            <h2 class="about-heading lg-heading text-dark">About Us</h2>
+            <p>
+                We provide thousands of products sold by hundreds of vendors around the country. Customers can choose, and buy products with ease. Vendors can manage products, inventory and sell goods, all on a single platform.
+            </p>
+            <div class="points">
+                <div class="left-points">
+                    <ul>
+                        <li>Variety of products.</li>
+                        <li>easy ordering.</li>
+                        <li>user - friendly user interface.</li>
+                    </ul>
+                </div>
+                <div class="right-points">
+                    <ul>
+                        <li>Product management.</li>
+                        <li>Inventory.</li>
+                        <li>Sales.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="count">
+                <!-- type count-itme*4 and press tab -->
+                <div class="count-item count-item1">
+                    <span class="lg-heading text-red">98000+</span>
+                    <p class="text-dark">Products</p>
+                </div>
+                <div class="count-item count-item2">
+                    <span class="lg-heading text-red">500+</span>
+                    <p class="text-dark">Places</p>
+                </div>
+                <div class="count-item count-item3">
+                    <span class="lg-heading text-red">4250+</span>
+                    <p class="text-dark">Vendors</p>
+                </div>
+                <div class="count-item count-item4">
+                    <span class="lg-heading text-red">10000+</span>
+                    <p class="text-dark">Users</p>
+                </div>
+            </div>
+
+            <div class="banner">
+                <div class="banner-text">
+                    <p class="text-white">
+                        What are you waiting for? Reach us right now.
+                    </p>
+                </div>
+                <div class="contact">
+                    <a href="contact.html" class="btn-contact">contact us</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    {% endblock %}
+</body>
+</html>

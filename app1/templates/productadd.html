@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block productupdate %}
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Add Products</title>
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/75f867dd61.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="productadd">
+    <div class="productaddbody">
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h3>Add Product</h3>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter Product Name" />
+            <label for="des">Description</label>
+            <input type="text" name="des" id="des" placeholder="Enter Product Description" />
+            <label for="image">Image</label>
+            <input type="file" name="image" id="image" accept="image/*" />
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price" placeholder="Enter Product Price" />
+            <label for="review">Review</label>
+            <input type="text" name="review" id="review" placeholder="Enter Product Review" />
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+        
+
+    {% endblock %}
+</body>
+</html>

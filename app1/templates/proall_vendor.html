@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block allproducts %}
+{% load static %}
+
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Your Products</title>
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/75f867dd61.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="proall">
+    
+    <div class="container">
+        <h1 class="heading">Welcome, {{v.username}} - {{v.cname}}! <br />Your Products</h1>
+        <form method="get">
+            <input type="text" name="search" id="search" placeholder="Search products" />
+            <input type="submit" name="submit" value="Search" />
+        </form>
+        <div class="box-wrapper">
+            {% for i in l reversed %}
+
+            <div class="card">
+                <p class="proname">{{i.name}}<p>
+                    <img class="proimg" src="{{i.img.url}}" alt="Alternate Text" />
+                <p class="proprice">₹{{i.price}}</p>
+                <a href="{% url 'productview' i.id %}" class="proview">View</a>
+                <a href="{% url 'productupdate' i.id %}" class="proview">Update</a>
+                <a href="{% url 'productdel' i.id %}" class="proview">Delete</a>
+            </div>
+            {% endfor %}
+            
+                <div class="card">
+                    <a href="{% url 'productadd' %}" class="productadd">+</a>
+                </div>
+            
+        </div>
+    </div>
+    
+    {% endblock %}
+</body>
+</html>

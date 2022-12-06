@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block productview %}
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>{{v.name}}</title>
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/75f867dd61.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="productview">
+    <!--<table>
+        <tr>
+            <th>name</th>
+            <th>description</th>
+            <th>image</th>
+            <th>price</th>
+            <th>review</th>
+        </tr>
+
+        <tr>
+            <td>{{v.name}}</td>
+            <td>{{v.des}}</td>
+            <td>{{v.img}}</td>
+            <td>{{v.price}}</td>
+            <td>{{v.review}}</td>
+        </tr>
+
+
+    </table>-->
+    <div class="box-wrapper">
+        <div class="image">
+            <img src="{{v.img.url}}" alt="Alternate Text" />
+        </div>
+        <div class="detail">
+
+            <h1>{{v.name}}</h1>
+            <p class="des">{{v.des}}</p>
+            <p class="price">{{v.price}}</p>
+            <p class="review">{{v.review}}</p>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

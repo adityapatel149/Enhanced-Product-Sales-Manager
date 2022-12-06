@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% block about %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Contact Us</title>
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/75f867dd61.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="contact-body">
+    <section class="contact-form">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="company-address">
+
+                    <h1 class="md-heading">
+                        <i class="fas fa-map-marked-alt text-red"></i>Location
+                    </h1>
+                    <p>
+                        #149 Aditya Valley, San Francisco, California
+                    </p>
+                    <h1 class="md-heading">
+                        <i class="fas fa-envelope text-red"></i>Email
+                    </h1>
+                    <p>
+                        imadityapatel149@gmail.com
+                    </p>
+                    <h1 class="md-heading">
+                        <i class="fas fa-phone-alt text-red"></i>Call
+                    </h1>
+                    <p>
+                        +91 97979 79797
+                    </p>
+                    <img src="{% static '/images/building.jpg' %}" alt="Corporate Building" />
+                </div>
+                <form action="" class="form">
+                    <h1 class="lg-heading">Contact Us</h1>
+                    <p class="text-dark">Let us know your questions, suggestions, and concerns by filling out the contact form below.</p>
+                    <div class="form-group">
+                        <label for="username" class="">Username</label>
+                        <input type="text" id="username" value="" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="">Email</label>
+                        <input type="email" id="email" value="" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="">Phone</label>
+                        <input type="text" id="phone" value="" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="">Message</label>
+                        <textarea name="" id="message"></textarea>
+                    </div>
+                    <button type="submit" class="form-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    {% endblock %}
+</body>
+</html>
